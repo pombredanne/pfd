@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 
+# -------
+# imports
+# -------
+
+import sys
 
 matrix = []
 size = [0]
@@ -26,7 +31,7 @@ def pfd_initialize (r, a) :
 	assert a[0] > 0
 	assert a[1] > 0
 	size[0] = a[0]
-	print "Size...", size
+	#print "Size...", size
 	global matrix
 	matrix = []*size[0]
 	global visited
@@ -71,7 +76,6 @@ def pfd_find_target() :
 
 
 
-
 def pfd_print () :
 	global matrix
 	temp = ""
@@ -95,12 +99,14 @@ def pfd_solve (r, w) :
 
 	while counter < size[0]:
 		no_dependencies = pfd_find_target()
-		print "No Dependency: ", no_dependencies
+		#print "No Dependency: ", no_dependencies
 		pfd_clear(no_dependencies)
 		visited[no_dependencies]= 1
 		result +=  str(no_dependencies+1) + " "
 		counter += 1
-		pfd_print()
+		#pfd_print()
 	print(result)
 	#pfd_print()
     	
+def getMatrix():
+	return matrix
