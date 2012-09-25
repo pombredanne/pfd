@@ -102,10 +102,13 @@ def pfd_solve (r, w) :
 		#print "No Dependency: ", no_dependencies
 		pfd_clear(no_dependencies)
 		visited[no_dependencies]= 1
-		result +=  str(no_dependencies+1) + " "
+		result +=  str(no_dependencies+1)
 		counter += 1
+		if counter <size[0]:
+			result += " "
 		#pfd_print()
-	print(result)
+	w.write(result + "\n")
+
 	#pfd_print()
     	
 def getMatrix():
