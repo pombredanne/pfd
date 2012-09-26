@@ -157,14 +157,20 @@ class TestPFD (unittest.TestCase) :
     # find_target
     # -----------
 
-    def find_target_1 (self) :
+    def test_find_first_target_1 (self) :
         lala
 
-    def find_target_2 (self) :
+    def test_find_first_target_2  (self) :
         lala
 
-    def find_target_3 (self) :
+    def test_find_first_target_3 (self) :
         lala
+
+    def test_find_target_1(self):
+
+    def test_find_target_2(self):
+
+    def test_find_target_3(self):
 
 # ----
 # main
