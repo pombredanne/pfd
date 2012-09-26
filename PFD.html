@@ -1,0 +1,59 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module PFD</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>PFD</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/Ulysses/Documents/Fall 2012/cs373 Software Engineering/cs373-pfd/PFD.py">/Users/Ulysses/Documents/Fall 2012/cs373 Software Engineering/cs373-pfd/PFD.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-------<br>
+#&nbsp;imports<br>
+#&nbsp;-------</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="heapq.html">heapq</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-getMatrix"><strong>getMatrix</strong></a>()</dt><dd><tt>method&nbsp;used&nbsp;for&nbsp;the&nbsp;unit&nbsp;test<br>
+returns&nbsp;global&nbsp;matrix</tt></dd></dl>
+ <dl><dt><a name="-getTargets"><strong>getTargets</strong></a>()</dt><dd><tt>method&nbsp;used&nbsp;for&nbsp;the&nbsp;unit&nbsp;test<br>
+returns&nbsp;global&nbsp;matrix</tt></dd></dl>
+ <dl><dt><a name="-pfd_clear"><strong>pfd_clear</strong></a>(n)</dt><dd><tt>n&nbsp;is&nbsp;the&nbsp;column&nbsp;to&nbsp;clear&nbsp;out<br>
+return&nbsp;array&nbsp;of&nbsp;affected&nbsp;rows</tt></dd></dl>
+ <dl><dt><a name="-pfd_find_first_target"><strong>pfd_find_first_target</strong></a>()</dt><dd><tt>Fills&nbsp;array&nbsp;with&nbsp;all&nbsp;the&nbsp;zero-dependency</tt></dd></dl>
+ <dl><dt><a name="-pfd_initialize"><strong>pfd_initialize</strong></a>(r, a, b)</dt><dd><tt>reads&nbsp;two&nbsp;ints&nbsp;into&nbsp;a[0]&nbsp;and&nbsp;a[1]<br>
+r&nbsp;is&nbsp;a&nbsp;&nbsp;reader<br>
+a&nbsp;is&nbsp;an&nbsp;array&nbsp;of&nbsp;int<br>
+return&nbsp;true&nbsp;if&nbsp;that&nbsp;succeeds,&nbsp;false&nbsp;otherwise</tt></dd></dl>
+ <dl><dt><a name="-pfd_print"><strong>pfd_print</strong></a>()</dt></dl>
+ <dl><dt><a name="-pfd_printd"><strong>pfd_printd</strong></a>()</dt></dl>
+ <dl><dt><a name="-pfd_solve"><strong>pfd_solve</strong></a>(r, w)</dt><dd><tt>r&nbsp;is&nbsp;a&nbsp;reader<br>
+w&nbsp;is&nbsp;a&nbsp;writer<br>
+executes&nbsp;algorithm</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>dependencies_list</strong> = []<br>
+<strong>matrix</strong> = []<br>
+<strong>size</strong> = [0]<br>
+<strong>target</strong> = -1<br>
+<strong>targets</strong> = []</td></tr></table>
+</body></html>
