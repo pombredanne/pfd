@@ -10,7 +10,6 @@ import heapq
 
 matrix = []
 size = [0]
-visited = []
 dependencies_list = []
 target = -1
 targets = []
@@ -20,7 +19,7 @@ targets = []
 # pfd_initialize
 # ------------
 
-def pfd_initialize (r, a) :
+def pfd_initialize (r, a, b) :
 	"""
 	reads two ints into a[0] and a[1]
 	r is a  reader
@@ -40,7 +39,12 @@ def pfd_initialize (r, a) :
 	a[0] = int(l[0])
 	a[1] = int(l[1])
 	assert a[0] > 0
-	assert a[1] > 0
+	if(a[1]==0):
+		b[0] = 0
+		for i in xrange(a[0]):
+			print i+1,
+		print "\n"
+		return True;
 	size[0] = a[0]
 	global matrix
 	global dependencies_list
@@ -64,7 +68,7 @@ def pfd_initialize (r, a) :
 
 		for  n in xrange(2,len(l)):
 			matrix[row_index-1][int(l[n])-1] = 1
-
+	b[0] = 1
 	return True
 
 # ------------
@@ -125,39 +129,51 @@ def pfd_solve (r, w) :
 	executes algorithm
 	"""
 	global targets
+	targets = []
+
 	a = [0, 0]
+	b = [0]
+	while pfd_initialize(r, a,b) :
+		if b[0] == 1:
+			#pfd_initialize(r, a)
+			targets_array = []
+			pfd_find_first_target()
+			
+			resultArr = []
 
-	while pfd_initialize(r, a) :
 
-		#pfd_initialize(r, a)
-		targets_array = []
-		pfd_find_first_target()
-		
-		resultArr = []
+			while len(targets) > 0:
+				target = heapq.heappop(targets)
+				resultArr.append(target+1)
+				new_targets = pfd_clear(target)
 
-
-		while len(targets) > 0:
-			target = heapq.heappop(targets)
-			resultArr.append(target+1)
-			new_targets = pfd_clear(target)
-
-			for i  in new_targets:
-				dependencies_list[i]-=1
-				if dependencies_list[i] == 0:
-					heapq.heappush(targets,i)
-					
-		#Prints the result
-		for i in xrange(len(resultArr)) :
-		  print resultArr[i],
-		resultArray = []
-		print "\n"
+				for i  in new_targets:
+					dependencies_list[i]-=1
+					if dependencies_list[i] == 0:
+						heapq.heappush(targets,i)
+						
+			#Prints the result
+			w_str = ""
+			for i in xrange(len(resultArr)) :
+				w_str += str(resultArr[i])
+				if i != len(resultArr)-1:
+					w_str +=" "
+				#print resultArr[i],
+			resultArr = []
+			w.write(w_str + "\n\n")
 
 # -------------
 # getMatrix
 # -------------   	
 def getMatrix():
 	"""
+	method used for the unit test
 	returns global matrix
 	"""
 	return matrix
-	
+def getTargets():
+	"""
+	method used for the unit test
+	returns global matrix
+	"""
+	return targe
