@@ -5,10 +5,17 @@
 # -------
 
 import sys
+import heapq
+
 
 matrix = []
 size = [0]
 visited = []
+dependencies_list = []
+target = -1
+
+
+
 # ------------
 # pfd_read
 # ------------
@@ -33,6 +40,8 @@ def pfd_initialize (r, a) :
 	size[0] = a[0]
 	#print "Size...", size
 	global matrix
+	global dependencies_list
+	dependencies_list = [0]*size[0]
 	matrix = []*size[0]
 	global visited
 	visited = [0]*size[0]
@@ -48,15 +57,20 @@ def pfd_initialize (r, a) :
 
 		num_dependencies = int(l[1])
 
+		dependencies_list[row_index-1]= num_dependencies
+
 		for  n in xrange(2,len(l)):
 			matrix[row_index-1][int(l[n])-1] = 1
 	return True
 
 def pfd_clear(n):
 	global matrix
+	r = []
 	for i in xrange(size[0]):
 		if matrix[i][n] == 1:
 			matrix[i][n] = 0
+			r.append(i)
+	return r
 
 def pfd_find_target() :
 	target = -1
@@ -74,7 +88,10 @@ def pfd_find_target() :
 
 	return target
 
-
+def pfd_printd () :
+	global dependencies_list
+	for i in dependencies_list:
+		print i,
 
 def pfd_print () :
 	global matrix
@@ -85,6 +102,13 @@ def pfd_print () :
 		temp += "\n"
 	print temp
 
+def pfd_find_first_target():
+	global dependencies_list
+	for i in dependencies_list:
+		if dependencies_list[i] == 0:
+			return i
+	return -1
+
 # -------------
 # collatz_solve
 # -------------
@@ -93,10 +117,18 @@ def pfd_solve (r, w) :
 
 	a = [0, 0]
 	pfd_initialize(r, a)
+	targets_array = []
+	target = pfd_find_first_target()
+	targets_array.append(target)
 	result = ""
 	counter = 0
-	global visited
+	
+	temp_array = []
 
+
+
+	global visited
+	#pfd_printd ()
 	while counter < size[0]:
 		no_dependencies = pfd_find_target()
 		#print "No Dependency: ", no_dependencies
