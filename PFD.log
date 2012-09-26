@@ -1,0 +1,114 @@
+commit 05ee3064fd7274f2b82a2a1c80b31a73cc5d03c4
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Tue Sep 25 22:22:40 2012 -0500
+
+    new unit test for new implementation
+    close #22
+
+commit 4c8c1592cf3518abeda3d05e67bcb6cb9bb4bb4c
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Tue Sep 25 22:21:47 2012 -0500
+
+    Pass Acceptance Test
+    close #6
+    close #7
+    close #5
+    close #3
+    close #2
+    close #1
+
+commit 5c4daf07d6cedc59d7920222db2f810ba74e5b43
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Tue Sep 25 21:20:04 2012 -0500
+
+    Clean implementation and new acceptance tests
+    closes #16
+    closes #19
+
+commit 736e338505beff33dcffaefa80ff46a647d0466e
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Tue Sep 25 21:18:45 2012 -0500
+
+    Refactor implementation
+    closes #19
+
+commit 06574dce2c7db379e36338c22bd7adc6dffa0b9f
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Tue Sep 25 21:17:43 2012 -0500
+
+    Heap Implementation .40 / Naive 3.28
+    closes #21
+
+commit 921796ca3be27b750cd3830d50dc85adbb9742f8
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Tue Sep 25 20:24:52 2012 -0500
+
+    New Unit Test for new Methods
+    closes #12
+    closes #17
+
+commit 46c4601684012374f29b4105fca32ff82a03a73d
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Tue Sep 25 20:22:50 2012 -0500
+
+    closes #13
+    closes #14
+    closes #10
+
+commit 93b4cc499ce08436b3a0442f8205b4256572062e
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Tue Sep 25 20:21:22 2012 -0500
+
+    Spheres accepts the implementation
+    closes #15
+    closes #18
+
+commit 90785372a7a635ac87236b3d42f23c62420742be
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Mon Sep 24 21:43:30 2012 -0500
+
+    New Tests, fixed bug
+    close #9
+
+commit 0b1d4670d4319f38ccdc73cd0e13e91926bac75d
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Fri Sep 21 00:57:36 2012 -0500
+
+    Test Cases
+
+commit 198086cf1ee82c02abf07691791b2cef7acbf353
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Fri Sep 21 00:06:52 2012 -0500
+
+    Accepted Solution(Naive)
+
+commit a3b5c37ce46042e6396342e394d7c960d76bfcc5
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Fri Sep 21 00:06:22 2012 -0500
+
+    Naive Algorithm Done
+    Accepted by Sphere
+
+commit 7eaa2e5d2f9089348f71faeeaefdb129bb4e1bb8
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Fri Sep 21 00:05:36 2012 -0500
+
+    Intialization Method, Main
+
+commit 0da24950abbd8011ca33f78ade76f903b8248dea
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Fri Sep 21 00:04:16 2012 -0500
+
+    Adding Simple Test Case
+
+commit 43615aea0ed4805b836c381e26591407adb47099
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Thu Sep 20 21:41:42 2012 -0500
+
+    Adding Required Files
+
+commit 38cdcf8f925384f8fc2bacb8663e0ebd40c9e606
+Author: Raul U Cardenas <rucardenas@utexas.edu>
+Date:   Thu Sep 20 21:40:40 2012 -0500
+
+    First Commit
