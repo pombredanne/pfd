@@ -135,6 +135,7 @@ def pfd_solve (r, w) :
 		
 		resultArr = []
 
+
 		while len(targets) > 0:
 			target = heapq.heappop(targets)
 			resultArr.append(target+1)
